@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Favor</string>
+    <string name="next">Next</string>
+    <string name="new_session">New Session</string>
+    <string name="subject">Subject</string>
+    <string name="math">Math</string>
+    <string name="prob_desc">Problem Description</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor mauris etiam fringilla quis. Mattis duis a accumsan, imperdiet ornare risus, pellentesque vestibulum nulla. Lectus at orci lorem consequat mi, commodo duis</string>
+    <string name="photo">Photo</string>
+    <string name="choose_tutor">Choose Tutor</string>
+    <string name="back">Back</string>
+    <string name="name">Name</string>
+    <string name="view_profile">View Profile</string>
+    <string name="session_summary">Session Summary</string>
+    <string name="tutors">Tutor</string>
+    <string name="start_sessions">Start Session</string>
+
+
+    <string-array name="names">
+        <item>John Smith</item>
+        <item>Floyd Miles</item>
+        <item>Ronald Richards</item>
+        <item>Jane Doe</item>
+        <item>Mark Jones</item>
+        <item>Rebecca Black</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>$20/15 mins</item>
+        <item>$10/15 mins</item>
+        <item>$15/15 mins</item>
+        <item>$25/15 mins</item>
+        <item>$30/15 mins</item>
+        <item>$18/15 mins</item>
+    </string-array>
+</resources>

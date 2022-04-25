@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_200"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/headerToolbarView"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:foregroundGravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backImage"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"
+                app:tint="@color/text_black_color" />
+
+            <TextView
+                android:id="@+id/backPage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/outfit_regular"
+                android:gravity="center|start"
+                android:text="@string/back"
+                android:textColor="@color/text_black_color"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nft_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_bold"
+                    android:gravity="center|start"
+                    android:text="@string/choose_tutor"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="25sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:scrollbarSize="0dp"
+                    android:scrollbars="vertical"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
