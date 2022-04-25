@@ -30,8 +30,7 @@
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/settingsicon"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:srcCompat="@drawable/settingsicon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
