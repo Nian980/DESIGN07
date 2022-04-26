@@ -35,7 +35,7 @@ public class VideoSession extends AppCompatActivity {
 
         // Set video stuff
         sessionVideo = findViewById(R.id.videoView);
-        sessionVideo.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.session_video);
+        sessionVideo.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.session_video_crop);
 
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(sessionVideo);
