@@ -41,7 +41,7 @@ public class SessionSummaryActivity extends AppCompatActivity {
         databinding.nextbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(SessionSummaryActivity.this, MainActivity.class);  // On Button Click , Goes from this Page to Main Activity Page
+                Intent i = new Intent(SessionSummaryActivity.this, VideoSession.class);  // On Button Click , Goes from this Page to Main Activity Page
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slide_from_right); // Animation
                 startActivity(i);
             }

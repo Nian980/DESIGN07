@@ -32,5 +32,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/settingsicon" />
 
+    <ImageButton
+        android:id="@+id/screenBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="640dp"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/screenicon" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
