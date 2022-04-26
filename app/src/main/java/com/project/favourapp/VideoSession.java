@@ -1,8 +1,10 @@
 package com.project.favourapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -40,6 +42,7 @@ public class VideoSession extends AppCompatActivity {
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(sessionVideo);
         sessionVideo.setMediaController(mediaController);
+        sessionVideo.start(); // Autoplay when we enter this activity
 
 
         // Setting onClick behavior to the settingsButton
