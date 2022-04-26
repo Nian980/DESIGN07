@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.MediaController;
 import android.widget.PopupMenu;
 import android.widget.VideoView;
 
@@ -29,11 +29,18 @@ public class VideoSession extends AppCompatActivity {
         setContentView(R.layout.activity_video_session);
 
         // Referencing and Initializing the buttons
-        settingsButton = (ImageButton) findViewById(R.id.settingsBtn);
-        camButton = (ImageButton) findViewById(R.id.camBtn);
-        screenButton = (ImageButton) findViewById(R.id.screenBtn);
+        settingsButton = findViewById(R.id.settingsBtn);
+        camButton = findViewById(R.id.camBtn);
+        screenButton = findViewById(R.id.screenBtn);
 
-        sessionVideo = (VideoView) findViewById(R.id.videoView);
+        // Set video stuff
+        sessionVideo = findViewById(R.id.videoView);
+        sessionVideo.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.session_video);
+
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(sessionVideo);
+        sessionVideo.setMediaController(mediaController);
+
 
         // Setting onClick behavior to the settingsButton
         settingsButton.setOnClickListener(new View.OnClickListener() {
