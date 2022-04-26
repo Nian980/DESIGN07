@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
+import android.widget.VideoView;
 
 // Credits for sample lecture video:
 // https://www.youtube.com/watch?v=xbpUHSKoALg
@@ -18,6 +20,9 @@ public class VideoSession extends AppCompatActivity {
     ImageButton camButton;
     ImageButton screenButton;
 
+    // Video to play to emulate lecture
+    VideoView sessionVideo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +32,8 @@ public class VideoSession extends AppCompatActivity {
         settingsButton = (ImageButton) findViewById(R.id.settingsBtn);
         camButton = (ImageButton) findViewById(R.id.camBtn);
         screenButton = (ImageButton) findViewById(R.id.screenBtn);
+
+        sessionVideo = (VideoView) findViewById(R.id.videoView);
 
         // Setting onClick behavior to the settingsButton
         settingsButton.setOnClickListener(new View.OnClickListener() {
