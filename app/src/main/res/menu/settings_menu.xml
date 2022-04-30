@@ -3,26 +3,18 @@
 
     <item
         android:id="@+id/settingsMenu1"
-        android:title="Mute / Unmute" />
-
-    <item
-        android:id="@+id/settingsMenu2"
-        android:title="Chat" />
-
-    <item
-        android:id="@+id/settingsMenu3"
         android:title="Share file" />
 
     <item
-        android:id="@+id/settingsMenu4"
+        android:id="@+id/settingsMenu2"
         android:title="Record meeting" />
 
     <item
-        android:id="@+id/settingsMenu5"
+        android:id="@+id/settingsMenu3"
         android:title="End meeting" />
 
     <item
-        android:id="@+id/settingsMenu6"
+        android:id="@+id/settingsMenu4"
         android:title="Settings" />
 
 </menu>

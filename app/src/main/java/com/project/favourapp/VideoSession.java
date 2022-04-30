@@ -20,7 +20,8 @@ public class VideoSession extends AppCompatActivity {
 
     ImageButton settingsButton;
     ImageButton camButton;
-    ImageButton screenButton;
+    ImageButton chatButton;
+    ImageButton muteButton;
 
     // Video to play to emulate lecture
     VideoView sessionVideo;
@@ -33,12 +34,12 @@ public class VideoSession extends AppCompatActivity {
         // Referencing and Initializing the buttons
         settingsButton = findViewById(R.id.settingsBtn);
         camButton = findViewById(R.id.camBtn);
-        screenButton = findViewById(R.id.screenBtn);
+        chatButton = findViewById(R.id.chatBtn);
+        muteButton = findViewById(R.id.muteBtn);
 
         // Set video stuff
         sessionVideo = findViewById(R.id.videoView);
         sessionVideo.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.session_video_crop);
-
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(sessionVideo);
         sessionVideo.setMediaController(mediaController);
@@ -64,6 +65,8 @@ public class VideoSession extends AppCompatActivity {
 
                         // Put case statements here to do things depending on menu choice
 
+                        
+
                         return true;
                     }
                 });
@@ -82,11 +85,19 @@ public class VideoSession extends AppCompatActivity {
             }
         });
 
-        // Write a listener for screenButton to change to screen sharing mode (create another activity!)
+        muteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                muteButton.setSelected(!muteButton.isSelected());
 
-        // Implement whiteboard capabilities for the whiteboard button?
-
-
+                if (muteButton.isSelected()) {
+                    muteButton.setImageResource(R.drawable.unmuteicon);
+                }
+                else {
+                    muteButton.setImageResource(R.drawable.muteicon);
+                }
+            }
+        });
 
 
     }

@@ -38,12 +38,12 @@
         android:padding="0dp"
         android:scaleType="fitCenter"
         android:tooltipText="Settings"
-        app:layout_constraintStart_toEndOf="@+id/screenBtn"
+        app:layout_constraintStart_toEndOf="@+id/chatBtn"
         app:layout_constraintTop_toTopOf="@+id/bottomBar"
-        app:srcCompat="@drawable/settingsicon" />
+        app:srcCompat="@drawable/settingsiconnew" />
 
     <ImageButton
-        android:id="@+id/screenBtn"
+        android:id="@+id/chatBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -52,10 +52,10 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        android:tooltipText="Screen Mode"
+        android:tooltipText="Open Chat"
         app:layout_constraintStart_toEndOf="@+id/camBtn"
         app:layout_constraintTop_toTopOf="@+id/bottomBar"
-        app:srcCompat="@drawable/screenicon" />
+        app:srcCompat="@drawable/chaticon" />
 
     <ImageButton
         android:id="@+id/camBtn"
@@ -68,12 +68,12 @@
         android:padding="0dp"
         android:scaleType="fitCenter"
         android:tooltipText="Camera Mode"
-        app:layout_constraintStart_toEndOf="@+id/whiteboardBtn"
+        app:layout_constraintStart_toEndOf="@+id/muteBtn"
         app:layout_constraintTop_toTopOf="@+id/bottomBar"
-        app:srcCompat="@drawable/camicon" />
+        app:srcCompat="@drawable/camiconnew" />
 
     <ImageButton
-        android:id="@+id/whiteboardBtn"
+        android:id="@+id/muteBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -82,10 +82,10 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        android:tooltipText="Annotate Tools"
+        android:tooltipText="Mute/Unmute"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottomBar"
-        app:srcCompat="@drawable/whiteboardicon" />
+        app:srcCompat="@drawable/muteicon" />
 
 
 
