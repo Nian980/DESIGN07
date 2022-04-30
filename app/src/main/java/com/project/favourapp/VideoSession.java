@@ -65,7 +65,11 @@ public class VideoSession extends AppCompatActivity {
 
                         // Put case statements here to do things depending on menu choice
 
-                        
+                        if (menuItem.getItemId() == R.id.settingsMenu3) {
+                            // Go back to main activity!
+                            Intent i = new Intent(VideoSession.this, MainActivity.class);
+                            startActivity(i);
+                        }
 
                         return true;
                     }
