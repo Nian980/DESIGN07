@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -44,7 +45,10 @@ public class ChooseTutorActivity extends AppCompatActivity {
         // For RecyclerView to set Data for All the Tutors
         databinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         databinding.recyclerView.setHasFixedSize(true);
-        adapter = new RecyclerAdapter(this, prepareTutors());
+
+        Intent intent = getIntent();
+        String desc = intent.getStringExtra("desc");
+        adapter = new RecyclerAdapter(this, prepareTutors(), desc);
         databinding.recyclerView.setAdapter(adapter);  // Set Data in Adapter
 
     }

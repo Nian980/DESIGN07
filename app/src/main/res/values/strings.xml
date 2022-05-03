@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Favor</string>
+    <string name="app_name">InstantTutor</string>
     <string name="next">Next</string>
     <string name="new_session">New Session</string>
     <string name="subject">Subject</string>
     <string name="math">Math</string>
-    <string name="prob_desc">Problem Description</string>
-    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor mauris etiam fringilla quis. Mattis duis a accumsan, imperdiet ornare risus, pellentesque vestibulum nulla. Lectus at orci lorem consequat mi, commodo duis</string>
+    <string name="prob_desc">Question Description</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor mauris etiam fringilla quis. Mattis duis a accumsan, imperdiet ornare risus, pellentesque vestibulum nulla. Lectus at orci lorem consequat mi, commodo duis.</string>
     <string name="photo">Photo</string>
     <string name="choose_tutor">Choose Tutor</string>
     <string name="back">Back</string>
@@ -33,4 +33,6 @@
         <item>$30/15 mins</item>
         <item>$18/15 mins</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

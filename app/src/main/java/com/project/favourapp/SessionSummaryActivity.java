@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.project.favourapp.databinding.ActivitySessionSummaryBinding;
 
@@ -46,5 +47,16 @@ public class SessionSummaryActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        TextView desc = findViewById(R.id.desc);
+
+        Intent intent = getIntent();
+        String iDesc = intent.getStringExtra("desc");
+        desc.setText(iDesc);
+    }
+
+    public void viewProfile(View view) {
+        Intent intent = new Intent(this, TutorProfile.class);
+        startActivity(intent);
     }
 }

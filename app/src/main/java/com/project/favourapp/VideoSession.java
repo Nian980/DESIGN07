@@ -67,7 +67,7 @@ public class VideoSession extends AppCompatActivity {
 
                         if (menuItem.getItemId() == R.id.settingsMenu3) {
                             // Go back to main activity!
-                            Intent i = new Intent(VideoSession.this, MainActivity.class);
+                            Intent i = new Intent(VideoSession.this, HomeActivity.class);
                             startActivity(i);
                         }
 

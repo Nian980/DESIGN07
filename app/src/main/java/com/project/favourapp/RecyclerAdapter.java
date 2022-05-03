@@ -21,10 +21,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     private Context context;
     private List<Tutors> tutorsList = new ArrayList<>();
+    String desc;
 
-    public RecyclerAdapter(Context context, List<Tutors> tutorsList) {
+    public RecyclerAdapter(Context context, List<Tutors> tutorsList, String desc) {
         this.context = context;
         this.tutorsList = tutorsList;
+        this.desc = desc;
     }
 
 
@@ -42,7 +44,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         Tutors tutors = tutorsList.get(position);
-        holder.itemLayoutBinding.viewProfile.setOnClickListener(new View.OnClickListener() {
+        holder.itemLayoutBinding.rootView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(context, SessionSummaryActivity.class);
@@ -51,11 +53,22 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
                 i.putExtra("time",holder.itemLayoutBinding.timeTutor.getText());
                 i.putExtra("image",holder.itemLayoutBinding.getTutors().imageId);
                 i.putExtra("rating",tutorsList.get(position).ratingId);
+                i.putExtra("desc", desc);
                 ((Activity)context).overridePendingTransition(R.anim.slide_from_left,R.anim.slide_from_right); // Animation
                 context.startActivity(i);
-
             }
         });
+
+        holder.itemLayoutBinding.viewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, TutorProfile.class);
+                i.putExtra("desc", desc);
+                ((Activity)context).overridePendingTransition(R.anim.slide_from_left,R.anim.slide_from_right); // Animation
+                context.startActivity(i);
+            }
+        });
+
         holder.itemLayoutBinding.setTutors(tutors); // Set Tutors
         holder.itemLayoutBinding.rating.setRating(tutorsList.get(position).ratingId); // Set Rating
     }
@@ -67,7 +80,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     }
 
-    public  static class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         DesignTutorsBinding itemLayoutBinding;  // Data binding for all Items of Tutors
         public MyViewHolder(@NonNull DesignTutorsBinding itemView) {
             super(itemView.getRoot());

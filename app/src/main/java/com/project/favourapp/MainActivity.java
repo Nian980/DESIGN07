@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -77,8 +78,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void nextPage() {
-        // Next Page Choose Tuor Going Click Event Code
+        // Next Page Choose Tutor Going Click Event Code
+        EditText desc = findViewById(R.id.desc);
+
         Intent intent = new Intent(MainActivity.this, ChooseTutorActivity.class);
+        intent.putExtra("desc", desc.getText().toString());
         startActivity(intent);
     }
 }
