@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.project.favourapp.databinding.ActivitySessionSummaryBinding;
@@ -48,7 +49,7 @@ public class SessionSummaryActivity extends AppCompatActivity {
             }
         });
 
-        TextView desc = findViewById(R.id.desc);
+        EditText desc = findViewById(R.id.desc);
 
         Intent intent = getIntent();
         String iDesc = intent.getStringExtra("desc");
